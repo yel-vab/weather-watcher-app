@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --color-almost-black: #0d0d0d;
+  --color-cool-grey: #93A09E;
+  --color-flame: #cc5f23;
+  --color-french-grey: #B7C3C6;
+  --color-iron: #D7D3CB;
+  --color-light-blue: #B2DAE3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-light-blue);
+  color: var(--color-almost-black);
+  font-size: 1.2rem;
+  height: 100vh;
+  padding: 3rem;
+  margin: 0;
+  font-family:'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-wrapper {
+  display: grid;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.app-name {
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Toggle Button for Units*/
+
+.temp-toggle-button {
+  border: none;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 500;
+  height: 4rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4rem;
+}
+
+.toggle-c {
+  background-color: var(--color-flame);
+  color: var(--color-iron);
+}
+
+.toggle-f {
+  background-color: var(--color-cool-grey);
+  color: var(--color-almost-black);
+}
+
+/* Input Form */
+
+.input-form-wrapper input {
+  color: var(--color-flame);
+  border: none;
+  background-color: rgba(255, 255, 255, .70);
+  border-radius: .5rem;
+  font-family: inherit;
+  font-size: 2rem;
+  margin: 2rem auto 1rem auto; 
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.input-form-wrapper input:focus {
+  outline: none;
+}
+
+.input-form-wrapper button[type=submit] {
+  display: none;
+}
+
+/* City Card */
+
+.city-card-wrapper {
+  border-radius: 2rem;
+  height: 40rem;
+  padding-top: 1rem;
+  width: 50rem;
+}
+
+/* City Card - Level 1*/
+
+.city-card-upper {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  text-align: center;
+}
+
+.card-upper-one {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  justify-content: center;
+  width: 100%;
+}
+
+.fa {
+  position: absolute;
+  font-size: 2.5rem;
+}
+
+.fa-sun {
+  color: #b3b328;
+}
+
+.fa-moon {
+  color: #6989aa;
+}
+
+.card-upper-one .location {
+  display: block;
+  font-size: 6.5rem;
+  font-weight: 600;
+}
+
+.card-upper-one .country {
+  display: block;
+  font-size: 1.5rem;
+}
+
+/* City Card - Level 2*/
+
+.card-upper-two {
+  display: flex;
+  height: 55%;
+  position: relative;
+  width: 100%;
+}
+
+.upper-two-left {
+  text-align: right;
+  font-size: 11.5rem;
+  font-weight: 300;
+  width: 45%;
+}
+
+.upper-two-left .temp-1 {
+  font-size: 3rem;
+  position: absolute;
+  top: 2.3rem;
+  vertical-align: super;
+}
+
+.upper-two-right {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 600;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-left: 5rem;
+  text-align: left;
+  width: 55%;
+}
+
+.upper-two-right img {
+  display: block;
+  text-align: left;
+}
+
+/* City Card - Level 3*/
+
+.city-card-lower {
+  align-items: center;
+  display:flex;
+  height: 40%;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.round-data {
+  align-items: center;
+  background-color: #b96232;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-size: 4.5rem;
+  height: 10rem;
+  justify-content: center;
+  width: 10rem;
+}
+
+span .temp-2 {
+  align-self: flex-start;
+  display: flex;
+  font-size: 1.3rem;
+  line-height: 6;
+}
+
+.city-card-lower h2 {
+  position: absolute;
+}
+
+.city-card-lower h2 span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  height: 14rem;
+  position: absolute;
+  transform-origin: center;
+  text-align: center;
+  text-transform: uppercase;
+  width: 1rem;
+}
+
+.city-card-lower .feels-like span {
+  left: -17.1rem;
+  top: -7.3rem;
+}
+
+.feels-like .char-1 { transform: rotate(283deg); }
+.feels-like .char-2 { transform: rotate(301deg); }
+.feels-like .char-3 { transform: rotate(319deg); }
+.feels-like .char-4 { transform: rotate(337deg); }
+.feels-like .char-5 { transform: rotate(355deg); }
+.feels-like .char-6 { transform: rotate(8deg); }
+.feels-like .char-7 { transform: rotate(28deg); }
+.feels-like .char-8 { transform: rotate(44deg); }
+.feels-like .char-9 { transform: rotate(62deg); }
+.feels-like .char-10 { transform: rotate(80deg); }
+
+.city-card-lower .humidity span {
+  left: -.45rem;
+  top: -7.5rem;
+}
+
+.humidity .char-1 { transform: rotate(300deg); }
+.humidity .char-2 { transform: rotate(318deg); }
+.humidity .char-3 { transform: rotate(336deg); }
+.humidity .char-4 { transform: rotate(354deg); }
+.humidity .char-5 { transform: rotate(7deg); }
+.humidity .char-6 { transform: rotate(25deg); }
+.humidity .char-7 { transform: rotate(43deg); }
+.humidity .char-8 { transform: rotate(61deg); }
+
+.city-card-lower .uv-index span {
+  left: 16.2rem;
+  top: -7.5rem;
+}
+
+.uv-index .char-1 { transform: rotate(300deg); }
+.uv-index .char-2 { transform: rotate(318deg); }
+.uv-index .char-3 { transform: rotate(336deg); }
+.uv-index .char-4 { transform: rotate(354deg); }
+.uv-index .char-5 { transform: rotate(7deg); }
+.uv-index .char-6 { transform: rotate(25deg); }
+.uv-index .char-7 { transform: rotate(43deg); }
+.uv-index .char-8 { transform: rotate(61deg); }
+
+.radiation-low {
+  color: var(--color-almost-black);
+  background-color: #8ae600;
+}
+
+.radiation-moderate {
+  color: var(--color-almost-black);
+  background-color: #ffea2f;
+}
+
+.radiation-high {
+  color: var(--color-almost-black);
+  background-color: #ff9100;
+}
+
+.radiation-vhigh {
+  color: var(--color-almost-black);
+  background-color: #ff1900;
+}
+
+.radiation-extreme {
+  color: var(--color-almost-black);
+  background-color: #bb00ff;
+}
+
+.radiation-level-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.radiation-classification-text {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  right: 5.5rem;
+  text-transform: uppercase;
+  top: 13.5rem;
+}
